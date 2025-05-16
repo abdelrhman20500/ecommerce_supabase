@@ -1,16 +1,15 @@
-import 'package:ecommerce_supabase/Core/utilis/app_color.dart';
-import 'package:ecommerce_supabase/Features/Auth/presentation/views/forget_password_screen.dart';
-import 'package:ecommerce_supabase/Features/Auth/presentation/views/sign_up_screen.dart';
+import 'package:ecommerce_supabase/Features/Auth/presentation/views/login_screen.dart';
 import 'package:ecommerce_supabase/Features/Auth/presentation/views/widgets/custom_row.dart';
 import 'package:ecommerce_supabase/Features/Auth/presentation/views/widgets/custom_text_button.dart';
 import 'package:ecommerce_supabase/Features/Auth/presentation/views/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+import '../../../../Core/utilis/app_color.dart';
 
-  static const String routeName= "LoginScreen";
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
+  static const String routeName ="SignUpScreen";
   @override
   Widget build(BuildContext context) {
     var height= MediaQuery.of(context).size.height;
@@ -32,33 +31,25 @@ class LoginScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     children: [
+                      const CustomTextField(labelText: "Name",),
+                      SizedBox(height: height*0.03,),
                       const CustomTextField(labelText: "Email",),
                       SizedBox(height: height*0.03,),
                       CustomTextField(labelText: "Password",isSecure: true,
                         suffixIcon: IconButton(onPressed: (){}, icon: const Icon(Icons.visibility_off)),),
                       SizedBox(height: height*0.03,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                         CustomTextButton(text: "Forget Password ?", onTab: ()
-                         {
-                           Navigator.pushNamed(context, ForgetPasswordScreen.routeName);
-                         },)
-                        ],
-                      ),
+                      CustomRow(text: "Sign Up",onPressed: (){},),
                       SizedBox(height: height*0.027,),
-                      CustomRow(text: "Login",onPressed: (){},),
-                      SizedBox(height: height*0.027,),
-                      CustomRow(text: "Login with Google",onPressed: (){},),
+                      CustomRow(text: "Sign Up with Google",onPressed: (){},),
                       SizedBox(height: height*0.027,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text("I Don't have an Account? ", style:TextStyle(
+                          const Text("Already have an Account? ", style:TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.kBlackColor),),
-                          CustomTextButton(text: "Sign Up",onTab: ()
+                          CustomTextButton(text: "Login",onTab: ()
                           {
-                            Navigator.pushNamed(context, SignUpScreen.routeName);
+                            Navigator.pushNamed(context, LoginScreen.routeName);
                           },),
                         ],
                       )
@@ -71,8 +62,6 @@ class LoginScreen extends StatelessWidget {
         ),
       ),
     );
+
   }
 }
-
-
-
