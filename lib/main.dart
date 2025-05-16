@@ -1,3 +1,4 @@
+import 'package:ecommerce_supabase/Core/utilis/app_color.dart';
 import 'package:flutter/material.dart';
 
 import 'Features/Auth/presentation/views/login_screen.dart';
@@ -12,8 +13,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
     debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.kScaffoldColor
+      ),
       home: LoginScreen(),
     );
   }
