@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../../../../../Core/component/product_card.dart';
 import '../../../../../../../Core/component/product_list.dart';
 import '../../../widget/categories_list.dart';
 import '../../../widget/custom_search_field.dart';
