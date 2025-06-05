@@ -28,10 +28,6 @@ class HomeScreen extends StatelessWidget {
         builder: (context, state) {
           var cubit = BlocProvider.of<NavBarCubit>(context);
           return Scaffold(
-            appBar: AppBar(
-              centerTitle: true,
-              title: const Text("Welcome To Our Market", style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),),
-            ),
             body: SafeArea(
                 child: tabs[cubit.currentIndex]
             ),
