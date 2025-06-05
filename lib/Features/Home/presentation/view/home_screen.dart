@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:ecommerce_supabase/Core/utilis/app_color.dart';
 import 'package:ecommerce_supabase/Features/Home/presentation/view/tabs/fav_tab/view/fav_tab.dart';

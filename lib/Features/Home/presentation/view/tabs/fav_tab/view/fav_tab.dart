@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../../../Core/component/product_list.dart';
 
 class FavTab extends StatelessWidget {
