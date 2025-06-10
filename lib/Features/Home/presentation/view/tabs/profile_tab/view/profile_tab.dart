@@ -1,3 +1,4 @@
+import 'package:ecommerce_supabase/Features/Home/presentation/view/tabs/profile_tab/view/widgets/edit_name_screen.dart';
 import 'package:flutter/material.dart';
 import '../../../../../../../Core/component/custom_row_bottom.dart';
 import '../../../../../../../Core/utilis/app_color.dart';
@@ -32,7 +33,10 @@ class ProfileTab extends StatelessWidget {
                 SizedBox(height: height*0.01,),
                 const Text("abdelrhman95@gmail.com"),
                 SizedBox(height: height*0.02,),
-                CustomRowBottom(onTap: (){} ,iconData: Icons.person,text: "Edit Name",icon: Icons.arrow_forward_ios,),
+                CustomRowBottom(onTap: ()
+                {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const EditNameScreen()));
+                } ,iconData: Icons.person,text: "Edit Name",icon: Icons.arrow_forward_ios,),
                 SizedBox(height: height*0.026,),
                 CustomRowBottom(onTap: (){} ,iconData: Icons.shopping_basket,text: "My Cart",icon: Icons.arrow_forward_ios,),
                 SizedBox(height: height*0.026,),
