@@ -1,7 +1,8 @@
+import 'package:ecommerce_supabase/Features/home_tab/view/widget/categories_list.dart';
+import 'package:ecommerce_supabase/Features/home_tab/view/widget/custom_search_field.dart';
 import 'package:flutter/material.dart';
 import '../../../../../../../Core/component/product_list.dart';
-import '../../../widget/categories_list.dart';
-import '../../../widget/custom_search_field.dart';
+
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});

@@ -1,17 +1,17 @@
-
 import 'package:ecommerce_supabase/Core/utilis/app_color.dart';
-import 'package:ecommerce_supabase/Features/Home/presentation/view/tabs/fav_tab/view/fav_tab.dart';
-import 'package:ecommerce_supabase/Features/Home/presentation/view/tabs/home_tab/view/home_tab.dart';
-import 'package:ecommerce_supabase/Features/Home/presentation/view/tabs/profile_tab/view/profile_tab.dart';
-import 'package:ecommerce_supabase/Features/Home/presentation/view/tabs/store_tab/view/store_tab.dart';
-import 'package:ecommerce_supabase/Features/Home/presentation/view_manger/cubit/nav_bar_cubit.dart';
-import 'package:ecommerce_supabase/Features/Home/presentation/view_manger/cubit/nav_bar_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-class HomeScreen extends StatelessWidget {
-   HomeScreen({super.key});
+import '../../../fav_tab/view/fav_tab.dart';
+import '../../../home_tab/view/home_tab.dart';
+import '../../../profile_tab/view/profile_tab.dart';
+import '../../../store_tab/view/store_tab.dart';
+import '../view_manger/cubit/nav_bar_cubit.dart';
+import '../view_manger/cubit/nav_bar_state.dart';
+
+class LayoutScreen extends StatelessWidget {
+  LayoutScreen({super.key});
 
   final List<Widget> tabs=[
     const HomeTab(),

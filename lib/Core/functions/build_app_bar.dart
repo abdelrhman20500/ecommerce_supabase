@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../utilis/app_color.dart';
 
 AppBar buildAppBar(BuildContext context, String title) {

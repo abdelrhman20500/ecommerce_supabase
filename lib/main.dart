@@ -1,6 +1,6 @@
 import 'package:ecommerce_supabase/Core/utilis/app_color.dart';
+import 'package:ecommerce_supabase/Features/layout/presentation/view/layout_screen.dart';
 import 'package:flutter/material.dart';
-import 'Features/Home/presentation/view/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: AppColors.kScaffoldColor),
-      home: HomeScreen(),
+      home: LayoutScreen(),
       // routes: {
       //   LoginScreen.routeName: (_) => const LoginScreen(),
       //   SignUpScreen.routeName: (_) => const SignUpScreen(),

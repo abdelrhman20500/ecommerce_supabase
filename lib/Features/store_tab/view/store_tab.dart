@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../../Core/component/product_list.dart';
-import '../../../widget/custom_search_field.dart';
+import '../../home_tab/view/widget/custom_search_field.dart';
 
 class StoreTab extends StatelessWidget {
   const StoreTab({super.key});

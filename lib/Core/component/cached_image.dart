@@ -9,6 +9,8 @@ class CachedImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
+      height: 250,
+      width: double.infinity,
       imageUrl: url,
       placeholder: (context, url) => const CustomCircularProgressIndicator(),
       errorWidget: (context, url, error) => const Icon(Icons.error),

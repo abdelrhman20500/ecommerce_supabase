@@ -1,5 +1,5 @@
-import 'package:ecommerce_supabase/Features/Home/presentation/view/tabs/profile_tab/view/widgets/edit_name_screen.dart';
-import 'package:ecommerce_supabase/Features/Home/presentation/view/tabs/profile_tab/view/widgets/my_order_screen.dart';
+import 'package:ecommerce_supabase/Features/profile_tab/view/widgets/edit_name_screen.dart';
+import 'package:ecommerce_supabase/Features/profile_tab/view/widgets/my_order_screen.dart';
 import 'package:flutter/material.dart';
 import '../../../../../../../Core/component/custom_row_bottom.dart';
 import '../../../../../../../Core/utilis/app_color.dart';
