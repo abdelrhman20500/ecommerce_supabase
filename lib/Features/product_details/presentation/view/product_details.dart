@@ -1,5 +1,7 @@
 import 'package:ecommerce_supabase/Core/component/cached_image.dart';
 import 'package:ecommerce_supabase/Core/functions/build_app_bar.dart';
+import 'package:ecommerce_supabase/Features/Auth/presentation/views/widgets/custom_text_field.dart';
+import 'package:ecommerce_supabase/Features/product_details/presentation/view/widgets/comments_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -42,21 +44,21 @@ class ProductDetails extends StatelessWidget {
                         Icon(Icons.star, color: Colors.yellowAccent,size: 36,)
                       ],
                     ),
-                    IconButton(onPressed: (){}, icon: Icon(Icons.favorite,color: Colors.red,
+                    IconButton(onPressed: (){}, icon: const Icon(Icons.favorite,color: Colors.red,
                         size: 36,))
                   ],
                 ),
                 const SizedBox(height: 12,),
-                Text("Product Description"),
+                const Text("Product Description"),
                 const SizedBox(height: 12,),
-            RatingBar.builder(
+                RatingBar.builder(
               initialRating: 3,
               minRating: 1,
               direction: Axis.horizontal,
               allowHalfRating: true,
               itemCount: 5,
-              itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-              itemBuilder: (context, _) => Icon(
+              itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+              itemBuilder: (context, _) => const Icon(
                 Icons.star,
                 color: Colors.amber,
               ),
@@ -64,6 +66,18 @@ class ProductDetails extends StatelessWidget {
                 print(rating);
               },
             ),
+                const SizedBox(height: 12,),
+                CustomTextField(labelText: "type your Feedback",
+                suffixIcon: IconButton(onPressed: (){}, icon: const Icon(Icons.send)),),
+                const SizedBox(height: 12,),
+                const Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Comments", style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),),
+                  ],
+                ),
+                const SizedBox(height: 12,),
+                const CommentsList()
               ],
             ),
           )
@@ -72,3 +86,5 @@ class ProductDetails extends StatelessWidget {
     );
   }
 }
+
+
